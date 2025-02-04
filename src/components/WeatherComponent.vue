@@ -3,18 +3,21 @@
         <div
             class="flex justify-center items-center h-screen p-5 bg-gray-200 bg-gradient-to-t from-pink-500 to-violet-500 border-10 border-white rounded-4xl">
             <img src="/src/assets/weather-app.png" alt="logo"
-                class="w-20 h-20 absolute top-13 left-13 animate-spin-slow">
+                class="w-20 h-20 absolute top-7 left-7 animate-spin-slow">
             <input type="text"
-                class="w-2/4 p-5 border border-white enabled:hover:border-white rounded-3xl absolute top-15 focus:outline-none text-white"
+                class="w-2/4 p-5 border border-white enabled:hover:border-white rounded-3xl absolute top-9 focus:outline-none text-white"
                 placeholder="Stadt eingeben..." v-model="query" @keypress.enter="fetchWeather">
             <div
-                class="relative bg-transparent w-82 h-82  rounded-3xl flex-col justify-center items-center shadow-xl p-5  border border-white">
-                <img   :src="weather.icon || 'https://openweathermap.org/img/wn/01d@2x.png'" alt="Wetter Icon" class="w-25 h25 mb-3">
-                <h1 class="text-3xl font-semibold text-amber-50">{{ weather.city || '---' }}</h1>
-                <p class="text-xl font-light text-amber-50 mt-3">{{ weather.temp !== "" ? weather.temp + "°C" : "0" }}
+                class="relative bg-transparent max-w-sm w-full h-auto rounded-3xl flex flex-col justify-center items-center shadow-xl p-5 border border-white">
+                <img :src="weather.icon || 'https://openweathermap.org/img/wn/01d@2x.png'" alt="Wetter Icon"
+                    class="w-25 h-25 sm:w-20 sm:h-20 md:w-28 md:h-28 mb-3 ">
+                <h1 class="text-3xl sm:text-2xl md:text-3xl  font-semibold text-amber-50">{{ weather.city || '---' }}
+                </h1>
+                <p class="text-xl sm:text-xl md:text-2xl font-light text-amber-50 mt-3">{{ weather.temp !== "" ?
+                    weather.temp + "°C" : "0" }}
                 </p>
             </div>
-            <p v-if="error" class="text-white absolute bottom-20">{{ error }}</p>
+            <p v-if="error" class="text-white mt-5 flex justify-center absolute bottom-5 left-1/2 transform -translate-x-1/2 ">{{ error }}</p>
         </div>
     </div>
 </template>
