@@ -1,5 +1,29 @@
-# Vue 3 + Vite
+# Weather App
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+This is a simple weather app built with Vue 3 and Vite. The app uses the Weatherstack API to fetch current weather data based on a city name input.
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+## Project Structure
+
+
+
+## Installation
+
+1. Clone the repository:
+    ```sh
+    git clone <repository-url>
+    ```
+2. Navigate to the project directory:
+    ```sh
+    cd weatherapp
+    ```
+3. Install the dependencies:
+    ```sh
+    npm install
+    ```
+
+## Development
+
+To start the development server, run:
+```sh
+npm run dev
+

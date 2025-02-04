@@ -1,10 +1,10 @@
 <template>
-  <navbar />
+  <WeatherComponent />
 </template>
 
 <script setup>
 import { defineAsyncComponent }  from 'vue';
-const Navbar = defineAsyncComponent(() => import('./components/navbar.vue'));
+const WeatherComponent = defineAsyncComponent(() => import('./components/WeatherComponent.vue'));
 
 </script>
 
