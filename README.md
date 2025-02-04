@@ -32,4 +32,4 @@ weatherapp/
     ```
 
 ## 🌍 Live Demo
-🔗 [View the Weather App on Vercel](https://vercel.com/hamza-alahmads-projects/weather-app)
+🔗 [View the Weather App on Vercel](weather-app-ivory-three-48.vercel.app)
