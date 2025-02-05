@@ -1,7 +1,7 @@
 <template>
     <div>
         <div
-            class="flex justify-center items-center h-screen p-5 bg-gray-200 bg-gradient-to-t from-pink-500 to-violet-500 border-10 border-white rounded-4xl">
+            class="flex justify-center items-center h-dvh p-5 bg-gray-200 bg-gradient-to-t from-pink-500 to-violet-500 border-10 border-white rounded-4xl">
             <img src="/src/assets/weather-app.png" alt="logo"
                 class="w-16 h-16 absolute top-9 left-6 animate-spin-slow">
             <input type="text"
