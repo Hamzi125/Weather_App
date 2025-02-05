@@ -3,7 +3,7 @@
         <div
             class="flex justify-center items-center h-screen p-5 bg-gray-200 bg-gradient-to-t from-pink-500 to-violet-500 border-10 border-white rounded-4xl">
             <img src="/src/assets/weather-app.png" alt="logo"
-                class="w-20 h-20 absolute top-7 left-7 animate-spin-slow">
+                class="w-16 h-16 absolute top-9 left-6 animate-spin-slow">
             <input type="text"
                 class="w-2/4 p-5 border border-white enabled:hover:border-white rounded-3xl absolute top-9 focus:outline-none text-white"
                 placeholder="Stadt eingeben..." v-model="query" @keypress.enter="fetchWeather">
