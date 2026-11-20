@@ -1,1 +1,41 @@
 @import "tailwindcss";
+
+body {
+  background-color: #fff;
+}
+
+/* Leichter Schein, damit dunkle Icons (z. B. Mond, Nebel) auf dunklem Hintergrund sichtbar bleiben */
+.weather-icon {
+  filter: drop-shadow(0 0 6px rgb(255 255 255 / 0.55));
+}
+
+/* Dezente, halbtransparente Scrollleiste für horizontale Streifen */
+/* Firefox (Chrome würde mit diesen Eigenschaften die ::-webkit-Regeln ignorieren und Pfeile zeigen) */
+@supports not selector(::-webkit-scrollbar) {
+  .scroll-strip {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(255 255 255 / 0.35) transparent;
+  }
+}
+.scroll-strip::-webkit-scrollbar {
+  height: 6px;
+}
+.scroll-strip::-webkit-scrollbar-button {
+  display: none;
+}
+.scroll-strip::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scroll-strip::-webkit-scrollbar-thumb {
+  background: rgb(255 255 255 / 0.35);
+  border-radius: 9999px;
+}
+.scroll-strip::-webkit-scrollbar-thumb:hover {
+  background: rgb(255 255 255 / 0.6);
+}
+
+/* Nacht-Icons (…n@2x.png) und Nebel-Icons (50…) sind sehr dunkel → aufhellen */
+.weather-icon[src*="n@2x"],
+.weather-icon[src*="/50"] {
+  filter: brightness(2.6) drop-shadow(0 0 6px rgb(255 255 255 / 0.4));
+}
