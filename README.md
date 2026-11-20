@@ -1,17 +1,27 @@
 # Weather App ☀️🌧️
 
-A simple weather app built with Vue 3 and Vite. The app uses the Weatherstack API to fetch real-time weather data based on a city name input.
+A simple weather app built with Vue 3 and Vite. The app uses the free [Open-Meteo API](https://open-meteo.com) (HTTPS, no API key required) to show current weather, an hourly and a 5-day forecast for any city.
 
 ## 🌿Features
-✅ Live weather updates for any city
-✅ Fast and minimalist UI with Vue 3 + Vite
-✅ API integration with Weatherstack
+✅ City search with autocomplete suggestions (keyboard navigation supported)
+✅ Current weather: temperature, feels like, humidity, wind, UV index, sunrise & sunset
+✅ Hourly forecast for the next 24 hours and a 5-day forecast
+✅ Background changes with the weather and time of day
+✅ ⭐ Favorite cities and 📍 weather for your current location
+✅ °C / °F toggle
+✅ German and Arabic (RTL) interface
+✅ Installable as a PWA, last results available offline
+✅ Remembers the last city, language and unit
+✅ No API key needed – powered by Open-Meteo
 
 ## 📂Project Structure
 
 weatherapp/
-│-- src/ # Main directory with Vue components
-│-- public/ # Static assets
+│-- src/components/ # Vue components (search, current weather, forecasts)
+│-- src/api/ # Open-Meteo API calls
+│-- src/utils/ # Weather codes, themes, localStorage helpers
+│-- src/settings.js # Language (DE/AR), translations and units
+│-- public/ # Static assets & PWA icons
 │-- package.json # Dependencies & scripts
 │-- vite.config.js # Vite configuration
 

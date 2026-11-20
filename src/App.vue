@@ -3,10 +3,8 @@
 </template>
 
 <script setup>
-import { defineAsyncComponent }  from 'vue';
-const WeatherComponent = defineAsyncComponent(() => import('./components/WeatherComponent.vue'));
-import { inject } from '@vercel/analytics'
+import { inject } from '@vercel/analytics';
+import WeatherComponent from './components/WeatherComponent.vue';
+
 inject();
 </script>
-
- 
